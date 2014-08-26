@@ -8,7 +8,7 @@
     <string name="close_flight_time">Close Airplane Mode Time</string>
 
     <string name="action_about">About</string>
-    <string name="action_about_text">&#160;&#160;&#160;&#160;This APP need root permission. And if your device is above android 4.2, don't worry. this still worked! \nIf you have any questions, please tell me.\nEmail: max.yong163@gmail.com\nQQ: 9175289</string>
+    <string name="action_about_text">This App need root permission. If your device is above android 4.2, never mind, this app still worked!\nIf you have any questions, please tell me.\nEmail: max.yong163@gmail.com\nQQ: 9175289</string>
     <string name="action_ok">OK</string>
-    <string name="sign_text">Max——Auto Airplane Mode</string>
+    <string name="sign_text">From Max——Auto Airplane Mode</string>
 </resources>
