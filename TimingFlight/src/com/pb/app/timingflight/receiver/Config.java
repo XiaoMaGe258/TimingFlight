@@ -11,7 +11,6 @@ import android.text.format.Time;
 /**
  * Data structure for holding AutoFlighty configurations.
  * Should always be consistent with local config file as SharedPreferences.
- * @author Xie Jiaye
  */
 public class Config {
 	

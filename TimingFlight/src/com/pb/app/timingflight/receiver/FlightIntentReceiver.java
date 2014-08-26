@@ -11,7 +11,7 @@ import com.pb.app.timingflight.airplanemode.AirplaneModeUtils;
 /**
  * BroadcastReceiver that handles auto-on/off broadcasts, and turns on/off
  * airplane mode.
- * @author XMG
+ * @author Max
  */
 public class FlightIntentReceiver extends BroadcastReceiver {
 	
@@ -22,10 +22,7 @@ public class FlightIntentReceiver extends BroadcastReceiver {
 	public void onReceive(final Context context, Intent intent) {
 
 		String action = intent.getAction();
-//		Log.d("napandroid", action);
-		Log.d("xmg","in onReceive   action="+action);
 		if (TURN_ON_AIRPLANE.equals(action)) {
-            Log.d("xmg","on");
             new Thread(new Runnable() {
 				@Override
 				public void run() {
@@ -36,7 +33,6 @@ public class FlightIntentReceiver extends BroadcastReceiver {
 				}
 			}).start();
 		} else if (TURN_OFF_AIRPLANE.equals(action)) {
-            Log.d("xmg","off");
             new Thread(new Runnable() {
 				@Override
 				public void run() {
@@ -48,10 +44,8 @@ public class FlightIntentReceiver extends BroadcastReceiver {
 			}).start();
 		} else if (Intent.ACTION_BOOT_COMPLETED.equals(action)) {
 			Config config = new Config(context);
-//			Log.d("napandroid", config.toString());
 			AlarmManager alarmManager = (AlarmManager) 
 					context.getSystemService(Context.ALARM_SERVICE);
-//			Log.d("napandroid", alarmManager.toString());
 			if (config.isTurnOnAirplaneModeEnabled()) {
 				config.registerOnAlarm(context, alarmManager);
 			}
