@@ -5,4 +5,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <string name="switch_text">定时飞行模式开关</string>
+    <string name="open_flight_time">晚上打开飞行模式时间</string>
+    <string name="close_flight_time">早上关闭飞行模式时间</string>
 </resources>

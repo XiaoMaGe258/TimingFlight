@@ -1,4 +1,4 @@
-package com.pb.app.timingflight.utils;
+package com.pb.app.timingflight.airplanemode;
 
 import android.content.Context;
 import android.content.Intent;

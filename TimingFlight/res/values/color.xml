@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffff</color>
+    <color name="holo_blue">#ff88ddff</color>
+    <color name="list_item_bg_normal">@color/white</color>
+    <color name="list_item_bg_checked">@color/holo_blue</color>
+    <color name="list_item_bg_pressed">@color/holo_blue</color>
+
+</resources>

@@ -7,7 +7,8 @@
     <uses-sdk
         android:minSdkVersion="17"
         android:targetSdkVersion="17" />
-
+	<uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -22,6 +23,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <service android:name=".FlightService" ></service>
+        <receiver
+                android:name="com.pb.app.timingflight.receiver.FlightIntentReceiver"
+                android:exported="false">
+            <intent-filter>
+                <action android:name="com.pb.app.timingflight.TURN_ON_AIRPLANE" />
+                <action android:name="com.pb.app.timingflight.TURN_OFF_AIRPLANE" />
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>
