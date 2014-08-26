@@ -1,14 +1,12 @@
 package com.pb.app.timingflight.receiver;
 
-import com.pb.app.timingflight.airplanemode.AirplaneModeUtils;
-
 import android.app.AlarmManager;
 import android.content.BroadcastReceiver;
 import android.content.Context;
 import android.content.Intent;
-import android.provider.Settings;
 import android.util.Log;
-import android.widget.Toast;
+
+import com.pb.app.timingflight.airplanemode.AirplaneModeUtils;
 
 /**
  * BroadcastReceiver that handles auto-on/off broadcasts, and turns on/off

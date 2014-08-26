@@ -23,7 +23,6 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service android:name=".FlightService" ></service>
         <receiver
                 android:name="com.pb.app.timingflight.receiver.FlightIntentReceiver"
                 android:exported="false">

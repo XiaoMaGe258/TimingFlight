@@ -45,7 +45,8 @@ public class AirplaneModeUtils {
         }
     }
     
-    private static void toggleBelowApiLevel17(Context context) throws Exception {
+    @SuppressWarnings("deprecation")
+	private static void toggleBelowApiLevel17(Context context) throws Exception {
         // Android 4.2 below
         Settings.System.putInt(
                 context.getContentResolver(),
@@ -87,7 +88,8 @@ public class AirplaneModeUtils {
     }
     
     // Android 4.2 below open Flight Mode
-    private static void openBelowApiLevel17(Context context) throws Exception {
+    @SuppressWarnings("deprecation")
+	private static void openBelowApiLevel17(Context context) throws Exception {
         Settings.System.putInt(
                 context.getContentResolver(),
                 Settings.System.AIRPLANE_MODE_ON, 1);
@@ -97,7 +99,8 @@ public class AirplaneModeUtils {
     }
     
     // Android 4.2 below close Flight Mode
-    private static void closeBelowApiLevel17(Context context) throws Exception {
+    @SuppressWarnings("deprecation")
+	private static void closeBelowApiLevel17(Context context) throws Exception {
     	Settings.System.putInt(
     			context.getContentResolver(),
     			Settings.System.AIRPLANE_MODE_ON, 0);

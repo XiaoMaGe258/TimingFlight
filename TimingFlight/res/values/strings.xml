@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">TimingFlight</string>
-    <string name="hello_world">Hello world!</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">定时飞行开关</string>
 
     <string name="switch_text">定时飞行模式开关</string>
     <string name="open_flight_time">晚上打开飞行模式时间</string>
     <string name="close_flight_time">早上关闭飞行模式时间</string>
+
+    <string name="action_about">关于</string>
+    <string name="action_about_text">&#160;&#160;&#160;&#160;第一次做这类APP，由于google将android4.2以上关于飞行模式的权限提高成系统权限了，普通应用就无权限修改了。导致市面上绝大部分的更改飞行模式功能的应用都失效了。所以我这个APP需要有root权限才可以正常工作。无论哪个版本的android，都可以正常工作！\n如果有任何意见，请联系我：\nQQ：9175289\nEmail：max.yong163@gmail.com</string>
+    <string name="action_ok">好 的</string>
+    <string name="sign_text">马勇出品——自动定时开关飞行模式</string>
 </resources>

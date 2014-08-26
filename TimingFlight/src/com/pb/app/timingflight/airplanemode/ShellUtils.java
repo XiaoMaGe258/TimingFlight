@@ -1,7 +1,16 @@
 package com.pb.app.timingflight.airplanemode;
 
-import java.io.*;
-import java.util.*;
+import android.annotation.SuppressLint;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 
 public class ShellUtils {
@@ -9,8 +18,10 @@ public class ShellUtils {
     private final static String[] BINARY_PLACES = {"/data/bin/", "/system/bin/", "/system/xbin/", "/sbin/",
             "/data/local/xbin/", "/data/local/bin/", "/system/sd/xbin/", "/system/bin/failsafe/",
             "/data/local/"};
-    private final static String PYTHON_HOME = "/data/data/fq.router2/python";
-    public static File DATA_DIR = new File("/data/data/fq.router2");
+    @SuppressLint("SdCardPath")
+	private final static String PYTHON_HOME = "/data/data/fq.router2/python";
+    @SuppressLint("SdCardPath")
+	public static File DATA_DIR = new File("/data/data/fq.router2");
     public static File BUSYBOX_FILE = new File(DATA_DIR, "busybox");
     private static Boolean IS_ROOTED = null;
 
@@ -121,7 +132,8 @@ public class ShellUtils {
         return output.toString();
     }
 
-    public static Map<String, String> pythonEnv() {
+    @SuppressWarnings("serial")
+	public static Map<String, String> pythonEnv() {
         return new HashMap<String, String>() {{
             put("PYTHONHOME", PYTHON_HOME);
             put("PYTHONPATH", PYTHON_HOME + "/lib/python2.7/lib-dynload:" + PYTHON_HOME + "/lib/python2.7");
