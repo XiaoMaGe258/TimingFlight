@@ -11,7 +11,6 @@ import android.content.DialogInterface;
 import android.os.Build;
 import android.os.Bundle;
 import android.text.format.Time;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -101,7 +100,6 @@ public class MainActivity extends Activity {
                                 mConfig.setTurnOnHourMinute(hourOfDay, minute);
                                 
                                 if (mConfig.isTurnOnAirplaneModeEnabled()) {
-                                	Log.d("xmg", "re register  121");
                                     mConfig.registerOnAlarm(getApplicationContext(), mAlarmManager);
                                 }
                                 openText.setText(getText(R.string.open_flight_time) + ":  " + 
@@ -169,7 +167,6 @@ public class MainActivity extends Activity {
 	public static boolean upgradeRootPermission(String pkgCodePath) {
 	    Process process = null;
 	    DataOutputStream os = null;
-	    Log.d("xmg", "pkgCodePath="+pkgCodePath);
 	    try {
 	        String cmd="chmod 777 " + pkgCodePath;
 	        process = Runtime.getRuntime().exec("su"); //切换到root帐号
